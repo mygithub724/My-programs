@@ -15,7 +15,22 @@ int main(int argc,char **argv)
 	char ch;
 	FILE *fd=fopen("data.txt","w");
 	while((ch=getc(fs))!=-1)
-	{
+	 {
+if(ch!='\n')
+{
+		 if((ch!=' '))
+		 {
+		ch=ch^32;
 		fputc(ch,fd);
+		 }
+		 else
+		 
+			 fputc(ch,fd);
+}
+else
+fputc(ch,fd);
+
 	}
+	fclose(fs);
+	fclose(fd);
 }
